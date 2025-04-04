@@ -1,7 +1,7 @@
 ![behance](https://github.com/design-sparx/antd-multipurpose-dashboard/assets/26582923/cc9c94ee-488f-4ae5-bb17-bbfe230e8524)
 
 <p align="center">
-<img src="public/logo-no-background.png" alt="logo" height="100"/>
+<img src="public/Group.svg" alt="logo" height="100"/>
 </p>
 
 <p align="center">
@@ -174,20 +174,7 @@ the source files are included in the package.
 ┃ ┣ 📂 stories/                 # Storybook folder **
 ┃ ┣ 📂 types/                   # Typescript types/interfaces **
 ┃ ┣ 📂 utils/                   # Useful functions folder **
-┣ 📃 .editorconfig              # Editor config
-┣ 📃 .eslintrc                  # ESLint config
-┣ 📃 .gitignore                 # Git ignore
-┣ 📃 .prettierignore            # Prettier ignore
-┣ 📃 .prettierrc                # Prettier ignore
-┣ 📃 .versionrc                 # Versioning config
-┣ 📃 .commitlintrc              # Commitlint config
-┣ 📃 CHANGELOG.md               # Changelogs
-┣ 📃 CONTRIBUTING.md            # Contributing
-┣ 📃 LICENSE                    # License of the project
-┣ 📃 vite.config.js             # Vite config
-┣ 📃 README.md                  # Main README
-┣ 📃 renovate.json              # Renovate Bot config **
-┣ 📃 tsconfig.json              # TypeScript config
+
 ```
 
 </details>

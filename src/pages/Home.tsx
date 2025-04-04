@@ -5,7 +5,6 @@ import {
   PATH_CORPORATE,
   PATH_DASHBOARD,
   PATH_ERROR,
-  PATH_GITHUB,
   PATH_USER_PROFILE,
 } from '../constants';
 import { Link } from 'react-router-dom';
@@ -17,7 +16,6 @@ import {
   EditOutlined,
   FileOutlined,
   FormatPainterOutlined,
-  GithubOutlined,
   LoginOutlined,
   MergeCellsOutlined,
   PieChartOutlined,
@@ -227,17 +225,7 @@ export const HomePage = () => {
                     size="large"
                     block={isMobile}
                   >
-                    Live preview
-                  </Button>
-                </Link>
-                <Link to={PATH_GITHUB.repo}>
-                  <Button
-                    icon={<GithubOutlined />}
-                    type="default"
-                    size="large"
-                    block={isMobile}
-                  >
-                    Give us a star
+                   Start
                   </Button>
                 </Link>
               </Flex>
@@ -250,59 +238,7 @@ export const HomePage = () => {
           </Row>
         </Container>
       </Flex>
-      <Container style={sectionStyles}>
-        <Title
-          level={2}
-          className="text-center"
-          style={{ marginBottom: '2rem' }}
-        >
-          8 dashboard pages available
-        </Title>
-        <Row
-          gutter={[
-            { xs: 8, sm: 16, md: 24, lg: 32 },
-            { xs: 8, sm: 16, md: 24, lg: 32 },
-          ]}
-        >
-          {DASHBOARDS.map((dashboard) => (
-            <Col key={dashboard.title} xs={24} lg={8} xl={6}>
-              <Link to={dashboard.link}>
-                <Card
-                  hoverable
-                  cover={<img src={dashboard.image} alt={dashboard.title} />}
-                >
-                  <Text className="m-0 text-capitalize">{dashboard.title}</Text>
-                </Card>
-              </Link>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-      <Container style={sectionStyles}>
-        <Title
-          level={2}
-          className="text-center"
-          style={{ marginBottom: '2rem' }}
-        >
-          3+ pages available
-        </Title>
-        <Row
-          gutter={[
-            { xs: 8, sm: 16, md: 24, lg: 32 },
-            { xs: 8, sm: 16, md: 24, lg: 32 },
-          ]}
-        >
-          {APPS.map((app) => (
-            <Col key={app.title} xs={24} sm={12} lg={8} xl={6}>
-              <Link to={app.link}>
-                <Card hoverable cover={<img src={app.image} alt={app.title} />}>
-                  <Text className="m-0 text-capitalize">{app.title}</Text>
-                </Card>
-              </Link>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+    
       <Container style={sectionStyles}>
         <Title
           level={2}
@@ -334,28 +270,6 @@ export const HomePage = () => {
           ))}
         </Row>
       </Container>
-      <Card
-        style={{
-          width: isMobile ? '95%' : 500,
-          margin: '0 auto',
-          textAlign: 'center',
-        }}
-      >
-        <Title level={4} style={{ marginTop: 0 }}>
-          Haven't found an answer to your question?
-        </Title>
-        <Text style={{ marginTop: '1rem' }}>
-          Connect with us either on discord or email us
-        </Text>
-        <Flex gap="middle" justify="center" style={{ marginTop: '1rem' }}>
-          <Button href="mailto:kelvin.kiprop96@gmail.com" type="primary">
-            Email
-          </Button>
-          <Button target="_blank" href={`${PATH_GITHUB.repo}/issues`}>
-            Submit an issue
-          </Button>
-        </Flex>
-      </Card>
     </div>
   );
 };

@@ -176,34 +176,10 @@ const items: MenuProps['items'] = [
   ]),
 
   getItem('Help', 'help', null, [], 'group'),
-  getItem(
-    <Link to={PATH_DOCS.productRoadmap} target="_blank">
-      Roadmap
-    </Link>,
-    'product-roadmap',
-    <ProductOutlined />
-  ),
-  getItem(
-    <Link to={PATH_DOCS.components} target="_blank">
-      Components
-    </Link>,
-    'components',
-    <AppstoreAddOutlined />
-  ),
-  getItem(
-    <Link to={PATH_DOCS.help} target="_blank">
-      Documentation
-    </Link>,
-    'documentation',
-    <SnippetsOutlined />
-  ),
-  getItem(
-    <Link to={PATH_GITHUB.repo} target="_blank">
-      Give us a star
-    </Link>,
-    'give-us-a-star',
-    <GithubOutlined />
-  ),
+  getItem(<span>Roadmap</span>, 'product-roadmap', <ProductOutlined />),
+  getItem(<span>Components</span>, 'components', <AppstoreAddOutlined />),
+  getItem(<span>Documentation</span>, 'documentation', <SnippetsOutlined />),
+  getItem(<span>Give us a star</span>, 'give-us-a-star', <GithubOutlined />),
 ];
 
 const rootSubmenuKeys = ['dashboards', 'corporate', 'user-profile'];

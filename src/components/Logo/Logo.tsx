@@ -31,29 +31,16 @@ export const Logo = ({
     <Link to={href || '#'} className="logo-link">
       <Flex gap={others.gap || 'small'} align="center" {...others}>
         <img
-          src="/logo-no-background.png"
+          src="/Group.svg"
           alt="design sparx logo"
-          height={imgSize?.h || 48}
+          height={imgSize?.h || 32}
         />
-        <Typography.Title
-          level={5}
-          type="secondary"
-          style={{
-            color,
-            margin: 0,
-            padding: `4px 8px`,
-            backgroundColor: bgColor,
-            borderRadius,
-          }}
-        >
-          Antd Admin
-        </Typography.Title>
       </Flex>
     </Link>
   ) : (
     <Flex gap={others.gap || 'small'} align="center" {...others}>
       <img
-        src="/logo-no-background.png"
+        src="/Group.svg"
         alt="design sparx logo"
         height={imgSize?.h || 48}
       />

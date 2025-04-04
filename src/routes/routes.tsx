@@ -10,12 +10,6 @@ import {
   CorporateTeamPage,
   DefaultDashboardPage,
   EcommerceDashboardPage,
-  Error400Page,
-  Error403Page,
-  Error404Page,
-  Error500Page,
-  Error503Page,
-  ErrorPage,
   HomePage,
   MarketingDashboardPage,
   PasswordResetPage,
@@ -80,7 +74,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <PageWrapper children={<GuestLayout />} />,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -92,7 +85,6 @@ const router = createBrowserRouter([
   {
     path: '/dashboards',
     element: <PageWrapper children={<DashboardLayout />} />,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -132,7 +124,6 @@ const router = createBrowserRouter([
   {
     path: '/sitemap',
     element: <PageWrapper children={<DashboardLayout />} />,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -144,7 +135,6 @@ const router = createBrowserRouter([
   {
     path: '/corporate',
     element: <PageWrapper children={<CorporateLayout />} />,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -176,7 +166,6 @@ const router = createBrowserRouter([
   {
     path: '/user-profile',
     element: <PageWrapper children={<UserAccountLayout />} />,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -215,7 +204,6 @@ const router = createBrowserRouter([
   },
   {
     path: '/auth',
-    errorElement: <ErrorPage />,
     children: [
       {
         path: 'signup',
@@ -244,35 +232,8 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: 'errors',
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: '400',
-        element: <Error400Page />,
-      },
-      {
-        path: '403',
-        element: <Error403Page />,
-      },
-      {
-        path: '404',
-        element: <Error404Page />,
-      },
-      {
-        path: '500',
-        element: <Error500Page />,
-      },
-      {
-        path: '503',
-        element: <Error503Page />,
-      },
-    ],
-  },
-  {
     path: '/about',
     element: <PageWrapper children={<DashboardLayout />} />,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true,

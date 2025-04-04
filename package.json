@@ -1,9 +1,10 @@
 {
-  "name": "antd-multi-dashboard",
-  "private": "false",
+  "name": "dashboard",
+  "private": "true",
   "type": "module",
+  "author": "Nguyen Minh Đuc",
   "readme": "ERROR: No README data found!",
-  "_id": "antd-multi-dashboard@1.1.0",
+  "description": "Dashboard",
   "version": "1.4.2",
   "scripts": {
     "dev": "vite",
@@ -11,10 +12,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "changeset": "changeset",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "prettier:write": "prettier . --write",
-    "prepare": "husky install"
+    "prettier:write": "prettier . --write"
   },
   "dependencies": {
     "@ant-design/charts": "^1.4.2",
@@ -41,18 +39,6 @@
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.3",
-    "@commitlint/config-conventional": "^18.4.3",
-    "@storybook/addon-essentials": "7.5.2",
-    "@storybook/addon-interactions": "7.5.2",
-    "@storybook/addon-links": "7.5.2",
-    "@storybook/addon-onboarding": "1.0.8",
-    "@storybook/blocks": "7.5.2",
-    "@storybook/manager-api": "^7.5.2",
-    "@storybook/react": "7.5.2",
-    "@storybook/react-vite": "7.5.2",
-    "@storybook/testing-library": "0.2.2",
-    "@storybook/theming": "^7.5.2",
     "@types/lodash": "^4.14.197",
     "@types/react": "^18.2.15",
     "@types/react-calendar-timeline": "^0.28.2",
@@ -62,22 +48,12 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "chromatic": "^7.6.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "eslint-plugin-storybook": "^0.6.15",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
     "prettier": "3.1.1",
     "sass": "^1.66.1",
-    "storybook": "7.5.2",
-    "storybook-addon-react-router-v6": "^2.0.8",
-    "storybook-react-context": "^0.6.0",
     "typescript": "^5.0.2",
     "vite": "^4.5.3"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
   }
 }
