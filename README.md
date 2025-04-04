@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![behance](https://github.com/design-sparx/antd-multipurpose-dashboard/assets/26582923/cc9c94ee-488f-4ae5-bb17-bbfe230e8524)
 
 <p align="center">
@@ -178,3 +179,7 @@ the source files are included in the package.
 ```
 
 </details>
+=======
+# Admin-Dashboard
+Admin Dashboard
+>>>>>>> 353d304394253ecf4090f7e903ea22968e635b56
