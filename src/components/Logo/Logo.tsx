@@ -50,12 +50,13 @@ export const Logo = ({
         style={{
           color,
           margin: 0,
+          fontSize: 48, 
           padding: `4px 8px`,
           backgroundColor: bgColor,
           borderRadius,
         }}
       >
-        Antd Admin
+        Dashboard
       </Typography.Title>
     </Flex>
   );

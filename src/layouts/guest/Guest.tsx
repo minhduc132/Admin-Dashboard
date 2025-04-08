@@ -183,7 +183,7 @@ export const GuestLayout = () => {
                 Roadmap
               </Button>
             </Link>
-            <Link to={PATH_DASHBOARD.default}>
+            <Link to={PATH_DASHBOARD.user}>
               <Button icon={<LoginOutlined />} type="text">
               Start
               </Button>

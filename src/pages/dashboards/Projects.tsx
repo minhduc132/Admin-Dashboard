@@ -1,18 +1,13 @@
 import { Alert, Button, Col, Row, Segmented, Space } from 'antd';
 import {
   Card,
-  ClientsTable,
-  Loader,
   PageHeader,
-  ProjectsCard,
   ProjectsTable,
-  RevenueCard,
 } from '../../components';
 import { Column } from '@ant-design/charts';
 import { Projects } from '../../types';
 import { useState } from 'react';
 import {
-  CloudUploadOutlined,
   HomeOutlined,
   PieChartOutlined,
   PlusOutlined,
@@ -101,25 +96,15 @@ const RevenueColumnChart = () => {
     xField: 'period',
     yField: 'value',
     seriesField: 'name',
-
-    /** set color */
-    // color: ['#1ca9e6', '#f88c24'],
-
-    /** Set spacing */
-    // marginRatio: 0.1,
     label: {
-      // Label data label position can be manually configured
       position: 'middle',
-      // 'top', 'middle', 'bottom'
-      // Configurable additional layout method
       layout: [
-        // Column chart data label position automatically adjusted
         {
           type: 'interval-adjust-position',
-        }, // Data label anti-obstruction
+        }, 
         {
           type: 'interval-hide-overlap',
-        }, // Data label text color automatically adjusted
+        }, 
         {
           type: 'adjust-color',
         },
@@ -135,14 +120,14 @@ const PROJECT_TABS = [
     key: 'all',
     label: 'All projects',
   },
-  {
-    key: 'inProgress',
-    label: 'Active',
-  },
-  {
-    key: 'onHold',
-    label: 'On Hold',
-  },
+  // {
+  //   key: 'inProgress',
+  //   label: 'Active',
+  // },
+  // {
+  //   key: 'onHold',
+  //   label: 'On Hold',
+  // },
 ];
 
 export const ProjectsDashboardPage = () => {
@@ -151,11 +136,6 @@ export const ProjectsDashboardPage = () => {
     error: projectsDataError,
     loading: projectsDataLoading,
   } = useFetchData('../mocks/Projects.json');
-  const {
-    data: clientsData,
-    error: clientsDataError,
-    loading: clientsDataLoading,
-  } = useFetchData('../mocks/Clients.json');
   const [projectTabsKey, setProjectsTabKey] = useState<string>('all');
 
   const PROJECT_TABS_CONTENT: Record<string, React.ReactNode> = {
@@ -181,10 +161,10 @@ export const ProjectsDashboardPage = () => {
   return (
     <div>
       <Helmet>
-        <title>Projects | Antd Dashboard</title>
+        <title>User Dashboard</title>
       </Helmet>
       <PageHeader
-        title="projects dashboard"
+        title=""
         breadcrumbs={[
           {
             title: (
@@ -210,7 +190,7 @@ export const ProjectsDashboardPage = () => {
             },
           },
           {
-            title: 'projects',
+            title: 'user',
           },
         ]}
       />
@@ -220,84 +200,12 @@ export const ProjectsDashboardPage = () => {
           { xs: 8, sm: 16, md: 24, lg: 32 },
         ]}
       >
-        <Col xs={24} sm={12} lg={6}>
-          <RevenueCard title="Total revenue" value={1556.3} diff={280} />
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <RevenueCard title="Spent this week" value={1806.3} diff={180} />
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <RevenueCard title="Worked this week" value="35:12" diff={-10.0} />
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <RevenueCard title="Worked today" value="05:30:00" diff={-20.1} />
-        </Col>
         <Col span={24}>
           <Card
-            title="Recently added projects"
-            extra={<Button>View all projects</Button>}
-          >
-            {projectsDataError ? (
-              <Alert
-                message="Error"
-                description={projectsDataError.toString()}
-                type="error"
-                showIcon
-              />
-            ) : projectsDataLoading ? (
-              <Loader />
-            ) : (
-              <Row gutter={[16, 16]}>
-                {projectsData.slice(0, 4).map((o: Projects) => {
-                  return (
-                    <Col xs={24} sm={12} xl={6} key={o.project_id}>
-                      <ProjectsCard
-                        project={o}
-                        type="inner"
-                        style={{ height: '100%' }}
-                      />
-                    </Col>
-                  );
-                })}
-              </Row>
-            )}
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} xl={16}>
-          <Card
-            title="Project stats"
-            extra={
-              <Segmented
-                options={['Daily', 'Weekly', 'Monthly', 'Quarterly', 'Yearly']}
-              />
-            }
-          >
-            <RevenueColumnChart />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} xl={8}>
-          <Card title="Top clients">
-            {clientsDataError ? (
-              <Alert
-                message="Error"
-                description={clientsDataError.toString()}
-                type="error"
-                showIcon
-              />
-            ) : clientsDataLoading ? (
-              <Loader />
-            ) : (
-              <ClientsTable data={clientsData.slice(0, 5)} />
-            )}
-          </Card>
-        </Col>
-        <Col span={24}>
-          <Card
-            title="Projects"
+            title="User"
             extra={
               <Space>
-                <Button icon={<CloudUploadOutlined />}>Import</Button>
-                <Button icon={<PlusOutlined />}>New project</Button>
+                <Button icon={<PlusOutlined />}>New user</Button>
               </Space>
             }
             tabList={PROJECT_TABS}

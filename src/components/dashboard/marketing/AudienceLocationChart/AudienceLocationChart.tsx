@@ -127,12 +127,12 @@ const CirclePackingChart = () => {
     data,
     sizeField: 'r',
     color: 'rgb(252, 253, 191)-rgb(231, 82, 99)-rgb(183, 55, 121)',
-    // 自定义 label 样式
+   
     label: {
       formatter: ({ name }: any) => {
         return name !== 'root' ? name : '';
       },
-      // 偏移
+     
       offsetY: 8,
       style: {
         fontSize: 12,
@@ -149,18 +149,18 @@ const CirclePackingChart = () => {
 
 type Props = CardProps;
 
-export const AudienceLocationChart = ({ ...others }: Props) => {
-  return (
-    <Card
-      title="Audience by location"
-      extra={
-        <Popover content="View your audience data by their location">
-          <Button icon={<QuestionOutlined />} type="text" />
-        </Popover>
-      }
-      {...others}
-    >
-      <CirclePackingChart />
-    </Card>
-  );
-};
+// export const AudienceLocationChart = ({ ...others }: Props) => {
+//   return (
+//     <Card
+//       title="Audience by location"
+//       extra={
+//         <Popover content="View your audience data by their location">
+//           <Button icon={<QuestionOutlined />} type="text" />
+//         </Popover>
+//       }
+//       {...others}
+//     >
+//       <CirclePackingChart />
+//     </Card>
+//   );
+// };

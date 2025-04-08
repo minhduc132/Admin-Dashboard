@@ -85,15 +85,6 @@ export const ProjectsCard = (props: Props) => {
       children: <span className="text-capitalize">{status}</span>,
     },
     {
-      key: 'team_size',
-      label: <UsergroupAddOutlined />,
-      children: (
-        <Tooltip title="Team size">
-          <Typography.Text>{team_size}</Typography.Text>
-        </Tooltip>
-      ),
-    },
-    {
       key: 'period',
       label: <ClockCircleOutlined />,
       children: (

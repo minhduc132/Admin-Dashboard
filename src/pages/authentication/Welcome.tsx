@@ -18,7 +18,7 @@ export const WelcomePage = () => {
         A dynamic and versatile multipurpose dashboard utilizing Ant Design,
         React, TypeScript, and Vite.
       </Typography.Text>
-      <Link to={PATH_DASHBOARD.default}>
+      <Link to={PATH_DASHBOARD.user}>
         <Button type="primary" size="middle">
           Go to Homepage
         </Button>

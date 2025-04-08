@@ -568,16 +568,7 @@ const cardStyles: CSSProperties = {
 
 export const EcommerceDashboardPage = () => {
   const stylesContext = useStylesContext();
-  const {
-    data: topProducts,
-    error: topProductsError,
-    loading: topProductsLoading,
-  } = useFetchData('../mocks/TopProducts.json');
-  const {
-    data: topCategories,
-    error: topCategoriesError,
-    loading: topCategoriesLoading,
-  } = useFetchData('../mocks/TopCategories.json');
+
   const {
     data: topSellers,
     error: topSellersError,
@@ -781,44 +772,7 @@ export const EcommerceDashboardPage = () => {
             </Card>
           </Flex>
         </Col>
-        <Col xs={24} lg={12}>
-          <Card title="Popular products" style={cardStyles}>
-            {topProductsError ? (
-              <Alert
-                message="Error"
-                description={topProductsError.toString()}
-                type="error"
-                showIcon
-              />
-            ) : (
-              <Table
-                columns={PRODUCTS_COLUMNS}
-                dataSource={topProducts}
-                loading={topProductsLoading}
-                className="overflow-scroll"
-              />
-            )}
-          </Card>
-        </Col>
-        <Col xs={24} lg={12}>
-          <Card title="Popular categories" style={cardStyles}>
-            {topCategoriesError ? (
-              <Alert
-                message="Error"
-                description={topCategoriesError.toString()}
-                type="error"
-                showIcon
-              />
-            ) : (
-              <Table
-                columns={CATEGORIES_COLUMNS}
-                dataSource={topCategories}
-                loading={topCategoriesLoading}
-                className="overflow-scroll"
-              />
-            )}
-          </Card>
-        </Col>
+     
         <Col span={24}>
           <Card title="Top sellers">
             {topSellersError ? (

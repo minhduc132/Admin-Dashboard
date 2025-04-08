@@ -51,7 +51,7 @@ export const SignUpPage = () => {
     });
 
     setTimeout(() => {
-      navigate(PATH_DASHBOARD.default);
+      navigate(PATH_DASHBOARD.user);
     }, 5000);
   };
 

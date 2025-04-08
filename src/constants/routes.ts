@@ -4,16 +4,14 @@ function path(root: string, sublink: string) {
 
 const ROOTS_LANDING = '/';
 const ROOTS_DASHBOARD = '/dashboards';
-const ROOTS_SITEMAP = '/sitemap';
 const ROOTS_LAYOUT = '/layouts';
 const ROOTS_CORPORATE = '/corporate';
 const ROOTS_PROFILE = '/user-profile';
-const ROOTS_SOCIAL = '/social';
 const ROOTS_BLOG = '/blog';
 const ROOTS_CAREERS = '/careers';
 const ROOTS_ACCOUNT = '/account';
 const ROOTS_AUTH = '/auth';
-const ROOTS_PROJECTS = '/projects';
+const ROOTS_PROJECTS = '/user';
 const ROOTS_CONTACTS = '/contacts';
 const ROOTS_USER_MGMT = '/user-management';
 const ROOTS_SUBSCRIPTION = '/subscription';
@@ -22,7 +20,6 @@ const ROOTS_FILE_MGMT = '/file-manager';
 const ROOTS_INBOX = '/inbox';
 const ROOTS_CALENDAR = '/calendar';
 const ROOTS_ERRORS = '/errors';
-const ROOTS_ABOUT = '/about';
 
 export const PATH_LANDING = {
   root: ROOTS_LANDING,
@@ -34,19 +31,11 @@ export const PATH_LANDING = {
 
 export const PATH_DASHBOARD = {
   root: ROOTS_DASHBOARD,
-  default: path(ROOTS_DASHBOARD, '/default'),
-  projects: path(ROOTS_DASHBOARD, '/projects'),
+  user: path(ROOTS_DASHBOARD, '/user'),
   ecommerce: path(ROOTS_DASHBOARD, '/ecommerce'),
   marketing: path(ROOTS_DASHBOARD, '/marketing'),
-  social: path(ROOTS_DASHBOARD, '/social'),
-  bidding: path(ROOTS_DASHBOARD, '/bidding'),
-  learning: path(ROOTS_DASHBOARD, '/learning'),
-  logistics: path(ROOTS_DASHBOARD, '/logistics'),
 };
 
-export const PATH_SITEMAP = {
-  root: ROOTS_SITEMAP,
-};
 
 export const PATH_LAYOUT = {
   root: ROOTS_LAYOUT,
@@ -82,14 +71,6 @@ export const PATH_USER_PROFILE = {
   action: path(ROOTS_PROFILE, '/actions'),
   help: path(ROOTS_PROFILE, '/help'),
   feedback: path(ROOTS_PROFILE, '/feedback'),
-};
-
-export const PATH_SOCIAL = {
-  root: ROOTS_SOCIAL,
-  feed: path(ROOTS_SOCIAL, '/feed'),
-  activity: path(ROOTS_SOCIAL, '/activity'),
-  followers: path(ROOTS_SOCIAL, '/followers'),
-  settings: path(ROOTS_SOCIAL, '/settings'),
 };
 
 export const PATH_BLOG = {
@@ -224,6 +205,3 @@ export const PATH_SOCIALS = {
   youtube: 'https://twitter.com/kelvink_96',
 };
 
-export const PATH_ABOUT = {
-  root: ROOTS_ABOUT,
-};

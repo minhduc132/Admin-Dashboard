@@ -32,7 +32,7 @@ type FieldType = {
 
 export const SignInPage = () => {
   const {
-    token: { colorPrimary },
+    token: { colorError }
   } = theme.useToken();
   const isMobile = useMediaQuery({ maxWidth: 769 });
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ export const SignInPage = () => {
     });
 
     setTimeout(() => {
-      navigate(PATH_DASHBOARD.default);
+      navigate(PATH_DASHBOARD.user);
     }, 5000);
   };
 
@@ -64,15 +64,15 @@ export const SignInPage = () => {
           align="center"
           justify="center"
           className="text-center"
-          style={{ background: red, height: '100%', padding: '1rem' }}
+          style={{ background:colorError, height: '100%', padding: '1rem' }}
         >
           <Logo color="white" />
           <Title level={2} className="text-white">
             Welcome back to Strongbody
           </Title>
           <Text className="text-white" style={{ fontSize: 18 }}>
-            A dynamic and versatile multipurpose dashboard utilizing Ant Design,
-            React, TypeScript, and Vite.
+          Welcome to StrongBody – your online store for top-quality fitness products. From supplements to workout gear
+           we’ve got everything to help you achieve your health and fitness goals. Shop now and strengthen your body!
           </Text>
         </Flex>
       </Col>

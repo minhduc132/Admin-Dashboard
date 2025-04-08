@@ -29,14 +29,9 @@ const { Title, Text } = Typography;
 
 const DASHBOARDS = [
   {
-    title: 'bidding',
-    link: PATH_DASHBOARD.bidding,
-    image: '/showcase/dashboard/bidding.png',
-  },
-  {
-    title: 'default',
-    link: PATH_DASHBOARD.default,
-    image: '/showcase/dashboard/default.png',
+    title: 'projects',
+    link: PATH_DASHBOARD.user,
+    image: '/showcase/dashboard/projects.png',
   },
   {
     title: 'ecommerce',
@@ -44,29 +39,9 @@ const DASHBOARDS = [
     image: '/showcase/dashboard/ecommerce.png',
   },
   {
-    title: 'learning',
-    link: PATH_DASHBOARD.learning,
-    image: '/showcase/dashboard/learning.png',
-  },
-  {
-    title: 'logistics',
-    link: PATH_DASHBOARD.logistics,
-    image: '/showcase/dashboard/logistics.png',
-  },
-  {
     title: 'marketing',
     link: PATH_DASHBOARD.marketing,
     image: '/showcase/dashboard/marketing.png',
-  },
-  {
-    title: 'projects',
-    link: PATH_DASHBOARD.projects,
-    image: '/showcase/dashboard/projects.png',
-  },
-  {
-    title: 'social',
-    link: PATH_DASHBOARD.social,
-    image: '/showcase/dashboard/social.png',
   },
 ];
 

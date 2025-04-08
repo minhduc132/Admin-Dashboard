@@ -7,6 +7,8 @@ import {
   TagProps,
   Typography,
 } from 'antd';
+import { EditTwoTone, DeleteTwoTone, EyeTwoTone } from '@ant-design/icons';
+
 import { Projects } from '../../../../types';
 
 const COLUMNS = [
@@ -49,7 +51,6 @@ const COLUMNS = [
       } else {
         color = 'magenta';
       }
-
       return (
         <Tag color={color} className="text-capitalize">
           {_}
@@ -71,36 +72,58 @@ const COLUMNS = [
       } else {
         status = 'processing';
       }
-
       return <Badge status={status} text={_} className="text-capitalize" />;
     },
   },
+  // {
+  //   title: 'Team size',
+  //   dataIndex: 'team_size',
+  //   key: 'proj_team_size',
+  // },
+  // {
+  //   title: 'Duration',
+  //   dataIndex: 'project_duration',
+  //   key: 'project_duration',
+  // },
   {
-    title: 'Team size',
-    dataIndex: 'team_size',
-    key: 'proj_team_size',
-  },
-  {
-    title: 'Duration',
-    dataIndex: 'project_duration',
-    key: 'project_duration',
-  },
-  {
-    title: 'Start date',
+    title: 'Date',
     dataIndex: 'start_date',
     key: 'proj_start_date',
   },
+  {
+    title: 'Action',
+    key: 'action',
+    render: (_: any, record: Projects) => (
+      <div style={{ display: 'flex', gap: '12px' }}>
+         <EyeTwoTone
+          style={{ color: '#52c41a', cursor: 'pointer' }}
+          onClick={() => console.log('View', record)}
+        />
+        <EditTwoTone
+          style={{ color: '#52c41a', cursor: 'pointer' }}
+          onClick={() => console.log('View', record)}
+        />
+        <DeleteTwoTone
+          style={{ color: '#faad14', cursor: 'pointer' }}
+          onClick={() => console.log('Update', record)}
+        />
+      </div>
+    ),
+  }
+  
+  
 ];
-
 type Props = {
   data: Projects[];
-} & TableProps<any>;
+} & TableProps<Projects>;
 
-export const ProjectsTable = ({ data, ...others }: Props) => {
+
+export const ProjectsTable = ({ data,...others }: Props) => {
   return (
     <Table
       dataSource={data}
       columns={COLUMNS}
+      // rowKey={(record) => String(record.id)}
       className="overflow-scroll"
       {...others}
     />
