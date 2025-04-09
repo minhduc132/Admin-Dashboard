@@ -4,9 +4,6 @@ import { CheckCircleFilled, UserOutlined } from '@ant-design/icons';
 import { blue } from '@ant-design/colors';
 import { CSSProperties } from 'react';
 
-/**
- * mark - not a full name user, just a single user name
- */
 type Props = {
   fullName: string;
   mark?: boolean;

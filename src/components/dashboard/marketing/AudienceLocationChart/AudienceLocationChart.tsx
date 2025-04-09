@@ -149,18 +149,18 @@ const CirclePackingChart = () => {
 
 type Props = CardProps;
 
-// export const AudienceLocationChart = ({ ...others }: Props) => {
-//   return (
-//     <Card
-//       title="Audience by location"
-//       extra={
-//         <Popover content="View your audience data by their location">
-//           <Button icon={<QuestionOutlined />} type="text" />
-//         </Popover>
-//       }
-//       {...others}
-//     >
-//       <CirclePackingChart />
-//     </Card>
-//   );
-// };
+export const AudienceLocationChart = ({ ...others }: Props) => {
+  return (
+    <Card
+      title="Audience by location"
+      extra={
+        <Popover content="View your audience data by their location">
+          <Button icon={<QuestionOutlined />} type="text" />
+        </Popover>
+      }
+      {...others}
+    >
+      <CirclePackingChart />
+    </Card>
+  );
+};

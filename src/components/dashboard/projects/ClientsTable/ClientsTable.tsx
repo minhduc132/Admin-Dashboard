@@ -21,7 +21,8 @@ const COLUMNS = [
 
 type Props = {
   data: Clients[];
-} & TableProps<any>;
+} & TableProps<Clients>;
+
 
 export const ClientsTable = ({ data, ...others }: Props) => (
   <Table

@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       {
         index: true,
         path: '',
-        element: <SignInPage/>
+        element: <SignInPage />
       },
     ],
   },
@@ -78,27 +78,27 @@ const router = createBrowserRouter([
 
     ],
   },
-  {
-    path: '/auth',
-    children: [
-      {
-        path: 'signup',
-        element: <SignUpPage />,
-      },
-      {
-        path: 'signin',
-        element: <SignInPage />,
-      },
-      {
-        path: 'welcome',
-        element: <WelcomePage />,
-      },
-      {
-        path: 'password-reset',
-        element: <PasswordResetPage />,
-      },
-    ],
-  },
+  // {
+  //   path: '/auth',
+  //   children: [
+  //     {
+  //       path: 'signup',
+  //       element: <SignUpPage />,
+  //     },
+  //     {
+  //       path: 'signin',
+  //       element: <SignInPage />,
+  //     },
+  //     {
+  //       path: 'welcome',
+  //       element: <WelcomePage />,
+  //     },
+  //     {
+  //       path: 'password-reset',
+  //       element: <PasswordResetPage />,
+  //     },
+  //   ],
+  // },
 ]);
 
 export default router;

@@ -86,7 +86,7 @@ export const TasksListCard = ({ data, error, loading, ...others }: Props) => {
                       status={
                         item.status.toLowerCase() === 'completed'
                           ? 'success'
-                          : item.status.toLowerCase() === 'in progress'
+                          : item.status.toLowerCase() === 'seller'
                             ? 'processing'
                             : 'warning'
                       }

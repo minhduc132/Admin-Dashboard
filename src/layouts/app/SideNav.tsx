@@ -54,15 +54,15 @@ const items: MenuProps['items'] = [
       null
     ),
   ]),
-  getItem('Authentication', 'authentication', <SecurityScanOutlined />, [
-    getItem(<Link to={PATH_AUTH.signin}>Sign In</Link>, 'auth-signin', null),
-    getItem(<Link to={PATH_AUTH.signup}>Sign Up</Link>, 'auth-signup', null),
-    getItem(
-      <Link to={PATH_AUTH.passwordReset}>Password reset</Link>,
-      'auth-password-reset',
-      null
-    )
-  ]),
+  // getItem('Authentication', 'authentication', <SecurityScanOutlined />, [
+  //   getItem(<Link to={PATH_AUTH.signin}>Sign In</Link>, 'auth-signin', null),
+  //   getItem(<Link to={PATH_AUTH.signup}>Sign Up</Link>, 'auth-signup', null),
+  //   getItem(
+  //     <Link to={PATH_AUTH.passwordReset}>Password reset</Link>,
+  //     'auth-password-reset',
+  //     null
+  //   )
+  // ]),
 ];
 
 const rootSubmenuKeys = ['dashboards', 'user-profile'];
